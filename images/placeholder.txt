@@ -1,0 +1,5 @@
+This is a placeholder file to ensure the images directory is created.
+Please replace this with actual image files.
+
+Required images:
+- gallery-bg.jpg (for the hero section background)

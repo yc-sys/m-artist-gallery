@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="800" viewBox="0 0 1200 800">
+  <title>Art Gallery Background</title>
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8a7a66;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#5a4d3d;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bg-gradient)" />
+  <text x="50%" y="50%" font-family="Arial" font-size="24" fill="#ffffff" text-anchor="middle">Art Gallery Background</text>
+  <text x="50%" y="54%" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle">Please replace with actual image</text>
+</svg>
