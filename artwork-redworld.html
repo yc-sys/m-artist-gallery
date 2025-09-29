@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>红色世界 - M Artist 艺术家</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/artists.css">
+    <link rel="stylesheet" href="css/artwork-detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="artwork-detail-page">
+    <!-- 返回按钮 -->
+    <div class="back-button">
+        <a href="artists.html"><i class="fas fa-chevron-left"></i> 返回</a>
+    </div>
+
+    <!-- 作品详情区域 -->
+    <main class="artwork-detail-container">
+        <div class="artwork-header">
+            <div class="artist-profile">
+                <img src="images/placeholder.txt" alt="艺术家" class="artist-avatar">
+                <div class="artist-info-detail">
+                    <h1>现代艺术家</h1>
+                    <p class="artist-bio">这位艺术家专注于抽象表现主义，通过色彩和形式探索情感与意识的边界。作品常常挑战传统审美，引导观众进入一个充满想象力和感知的世界。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="artwork-content">
+            <div class="artwork-description">
+                <h2>作品详情 - 红色世界</h2>
+                <div>
+                    <p>《红色世界》是一幅充满激情与活力的抽象作品。艺术家通过不同色调的红色构建了一个充满张力的视觉空间，红色象征着热情、力量和生命力。画面中的笔触粗犷有力，色彩层次丰富，形成了强烈的视觉冲击力。</p>
+                    <p>这幅作品反映了艺术家对当代社会的思考和情感表达，红色既可以代表革命与变革，也可以象征爱与热情。观众可以在这片红色的海洋中找到自己的情感共鸣，体验艺术带来的心灵震撼。</p>
+                </div>
+            </div>
+
+            <div class="artwork-buttons">
+                <div class="button-container">
+                    <a href="#" class="artwork-button artist-interview">
+                        <div class="button-icon">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <span>艺术家采访</span>
+                    </a>
+                    <a href="#" class="artwork-button artwork-video">
+                        <div class="button-icon">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                        <span>作品视频讲解</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="artwork-image-large">
+                <img src="images/redworld.jpg" alt="红色世界">
+            </div>
+        </div>
+    </main>
+    
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>M Artist</h3>
+                <p>我们致力于推广中国当代艺术，连接艺术家与艺术爱好者，创造一个充满活力的艺术社区。</p>
+            </div>
+            <div class="footer-column">
+                <h3>服务项目</h3>
+                <ul>
+                    <li><a href="#">艺术品展览</a></li>
+                    <li><a href="#">艺术家推广</a></li>
+                    <li><a href="#">艺术教育</a></li>
+                    <li><a href="#">艺术品销售</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>空间设计</h3>
+                <ul>
+                    <li><a href="#">展览空间</a></li>
+                    <li><a href="#">艺术工作室</a></li>
+                    <li><a href="#">艺术图书馆</a></li>
+                    <li><a href="#">艺术咖啡厅</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>关注我们</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-weixin"></i></a>
+                    <a href="#"><i class="fab fa-weibo"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 M Artist. 保留所有权利。</p>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button id="back-to-top" title="返回顶部"><i class="fas fa-arrow-up"></i></button>
+
+    <script>
+        // 返回顶部按钮
+        const backToTopButton = document.getElementById("back-to-top");
+        
+        window.addEventListener("scroll", () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        });
+        
+        backToTopButton.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
+</body>
+</html>

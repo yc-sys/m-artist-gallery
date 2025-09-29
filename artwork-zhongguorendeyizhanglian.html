@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中国人的一张脸 - M Artist 艺术家</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/artists.css">
+    <link rel="stylesheet" href="css/artwork-detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="artwork-detail-page">
+    <!-- 返回按钮 -->
+    <div class="back-button">
+        <a href="artists.html"><i class="fas fa-chevron-left"></i> 返回</a>
+    </div>
+
+    <!-- 作品详情区域 -->
+    <main class="artwork-detail-container">
+        <div class="artwork-header">
+            <div class="artist-profile">
+                <img src="images/placeholder.txt" alt="艺术家" class="artist-avatar">
+                <div class="artist-info-detail">
+                    <h1>当代艺术家</h1>
+                    <p class="artist-bio">这位艺术家致力于探索中国人的身份认同与文化表达，通过独特的艺术语言展现中国人的精神面貌和文化内涵。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="artwork-content">
+            <div class="artwork-description">
+                <h2>作品详情 - 中国人的一张脸</h2>
+                <div>
+                    <p>《中国人的一张脸》是一幅探索中国人身份认同与文化表达的当代艺术作品。艺术家通过对中国人面部特征的抽象化处理，展现了中国人的精神面貌和文化内涵。作品融合了传统与现代元素，通过独特的构图和色彩运用，表达了对中国文化的深刻理解和思考。</p>
+                    <p>这幅作品不仅是对中国人外貌特征的描绘，更是对中国文化精神的探索。艺术家通过面部表情和眼神的刻画，展现了中国人的坚韧、智慧和包容。观众可以从中感受到艺术家对中国文化的热爱和对中国人精神世界的深入思考。</p>
+                </div>
+            </div>
+
+            <div class="artwork-buttons">
+                <div class="button-container">
+                    <a href="#" class="artwork-button artist-interview">
+                        <div class="button-icon">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <span>艺术家采访</span>
+                    </a>
+                    <a href="#" class="artwork-button artwork-video">
+                        <div class="button-icon">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                        <span>作品视频讲解</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="artwork-image-large">
+                <img src="images/zhongguorendeyizhanglian.jpg" alt="中国人的一张脸">
+            </div>
+        </div>
+    </main>
+    
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>M Artist</h3>
+                <p>我们致力于推广中国当代艺术，连接艺术家与艺术爱好者，创造一个充满活力的艺术社区。</p>
+            </div>
+            <div class="footer-column">
+                <h3>服务项目</h3>
+                <ul>
+                    <li><a href="#">艺术品展览</a></li>
+                    <li><a href="#">艺术家推广</a></li>
+                    <li><a href="#">艺术教育</a></li>
+                    <li><a href="#">艺术品销售</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>空间设计</h3>
+                <ul>
+                    <li><a href="#">展览空间</a></li>
+                    <li><a href="#">艺术工作室</a></li>
+                    <li><a href="#">艺术图书馆</a></li>
+                    <li><a href="#">艺术咖啡厅</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>关注我们</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-weixin"></i></a>
+                    <a href="#"><i class="fab fa-weibo"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 M Artist. 保留所有权利。</p>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button id="back-to-top" title="返回顶部"><i class="fas fa-arrow-up"></i></button>
+
+    <script>
+        // 返回顶部按钮
+        const backToTopButton = document.getElementById("back-to-top");
+        
+        window.addEventListener("scroll", () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        });
+        
+        backToTopButton.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
+</body>
+</html>

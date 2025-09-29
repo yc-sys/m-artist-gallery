@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人物肖像 - M Artist 艺术家</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/artists.css">
+    <link rel="stylesheet" href="css/artwork-detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="artwork-detail-page">
+    <!-- 返回按钮 -->
+    <div class="back-button">
+        <a href="artists.html"><i class="fas fa-chevron-left"></i> 返回</a>
+    </div>
+
+    <!-- 作品详情区域 -->
+    <main class="artwork-detail-container">
+        <div class="artwork-header">
+            <div class="artist-profile">
+                <img src="images/placeholder.txt" alt="艺术家" class="artist-avatar">
+                <div class="artist-info-detail">
+                    <h1>当代肖像艺术家</h1>
+                    <p class="artist-bio">这位艺术家专注于人物肖像创作，擅长捕捉人物内心情感和性格特点。通过独特的构图和色彩运用，展现人物的精神世界和内在气质，作品充满人文关怀和心理洞察。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="artwork-content">
+            <div class="artwork-description">
+                <h2>作品详情 - 人物肖像</h2>
+                <div>
+                    <p>《人物肖像》是一幅富有表现力的当代肖像作品。艺术家通过精心的构图和色彩处理，捕捉了人物的独特气质和内心世界。画面中的人物形象鲜明，眼神深邃，表情丰富，展现了艺术家对人物心理的敏锐洞察。</p>
+                    <p>这幅作品不仅是对人物外貌的再现，更是对其内心世界的探索。艺术家通过笔触、色彩和光影的处理，表达了对人性的思考和对生命的感悟。观众可以从中感受到艺术家对人物的尊重和理解，以及对人类共同情感的探索。</p>
+                </div>
+            </div>
+
+            <div class="artwork-buttons">
+                <div class="button-container">
+                    <a href="#" class="artwork-button artist-interview">
+                        <div class="button-icon">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <span>艺术家采访</span>
+                    </a>
+                    <a href="#" class="artwork-button artwork-video">
+                        <div class="button-icon">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                        <span>作品视频讲解</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="artwork-image-large">
+                <img src="images/renwuxiaoxiang.webp" alt="人物肖像">
+            </div>
+        </div>
+    </main>
+    
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>M Artist</h3>
+                <p>我们致力于推广中国当代艺术，连接艺术家与艺术爱好者，创造一个充满活力的艺术社区。</p>
+            </div>
+            <div class="footer-column">
+                <h3>服务项目</h3>
+                <ul>
+                    <li><a href="#">艺术品展览</a></li>
+                    <li><a href="#">艺术家推广</a></li>
+                    <li><a href="#">艺术教育</a></li>
+                    <li><a href="#">艺术品销售</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>空间设计</h3>
+                <ul>
+                    <li><a href="#">展览空间</a></li>
+                    <li><a href="#">艺术工作室</a></li>
+                    <li><a href="#">艺术图书馆</a></li>
+                    <li><a href="#">艺术咖啡厅</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>关注我们</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-weixin"></i></a>
+                    <a href="#"><i class="fab fa-weibo"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 M Artist. 保留所有权利。</p>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button id="back-to-top" title="返回顶部"><i class="fas fa-arrow-up"></i></button>
+
+    <script>
+        // 返回顶部按钮
+        const backToTopButton = document.getElementById("back-to-top");
+        
+        window.addEventListener("scroll", () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        });
+        
+        backToTopButton.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
+</body>
+</html>

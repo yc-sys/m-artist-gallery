@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>许德民 - M Artist 艺术家</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/artists.css">
+    <link rel="stylesheet" href="css/artwork-detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="artwork-detail-page">
+    <!-- 返回按钮 -->
+    <div class="back-button">
+        <a href="artists.html"><i class="fas fa-chevron-left"></i> 返回</a>
+    </div>
+
+    <!-- 作品详情区域 -->
+    <main class="artwork-detail-container">
+        <div class="artwork-header">
+            <div class="artist-profile">
+                <img src="images/xudeming.webp" alt="许德民" class="artist-avatar">
+                <div class="artist-info-detail">
+                    <h1>许德民</h1>
+                    <p class="artist-bio">许德民(1908年-1987年)，中国著名画家、书法家。出生于浙江省杭州市，毕业于杭州国立艺术院(现中国美术学院)。他的艺术风格融合了传统中国水墨画技法与现代表现手法，作品以山水画和花鸟画见长，笔墨精湛，意境深远。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="artwork-content">
+            <div class="artwork-description">
+                <h2>作品详情</h2>
+                <div>
+                    <p>《山水长卷》是许德民的代表作之一，创作于1960年代。这幅作品展现了许德民对中国传统山水画的深刻理解和创新。画面构图宏大，层次分明，远近高低各不同，体现了"远取其势，近取其质"的艺术原则。</p>
+                    <p>许德民的山水画继承了宋元山水画的传统，同时融入了现代审美意识，形成了独特的艺术风格。他擅长用墨色的浓淡变化表现山水的质感和空间感，笔触细腻而富有表现力，被誉为20世纪中国山水画的重要代表人物之一。</p>
+                </div>
+            </div>
+
+            <div class="artwork-buttons">
+                <div class="button-container">
+                    <a href="#" class="artwork-button artist-interview">
+                        <div class="button-icon">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <span>艺术家采访</span>
+                    </a>
+                    <a href="#" class="artwork-button artwork-video">
+                        <div class="button-icon">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                        <span>作品视频讲解</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="artwork-image-large">
+                <img src="images/xudeming.webp" alt="许德民作品">
+            </div>
+        </div>
+    </main>
+    
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>M Artist</h3>
+                <p>我们致力于推广中国当代艺术，连接艺术家与艺术爱好者，创造一个充满活力的艺术社区。</p>
+            </div>
+            <div class="footer-column">
+                <h3>服务项目</h3>
+                <ul>
+                    <li><a href="#">艺术品展览</a></li>
+                    <li><a href="#">艺术家推广</a></li>
+                    <li><a href="#">艺术教育</a></li>
+                    <li><a href="#">艺术品销售</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>空间设计</h3>
+                <ul>
+                    <li><a href="#">展览空间</a></li>
+                    <li><a href="#">艺术工作室</a></li>
+                    <li><a href="#">艺术图书馆</a></li>
+                    <li><a href="#">艺术咖啡厅</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>关注我们</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-weixin"></i></a>
+                    <a href="#"><i class="fab fa-weibo"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 M Artist. 保留所有权利。</p>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button id="back-to-top" title="返回顶部"><i class="fas fa-arrow-up"></i></button>
+
+    <script>
+        // 返回顶部按钮
+        document.addEventListener("DOMContentLoaded", function() {
+            const backToTopButton = document.getElementById("back-to-top");
+            
+            // 设置初始样式
+            backToTopButton.style.display = "none";
+            
+            window.addEventListener("scroll", () => {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.style.display = "block";
+                } else {
+                    backToTopButton.style.display = "none";
+                }
+            });
+            
+            backToTopButton.addEventListener("click", () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+            });
+        });
+    </script>
+</body>
+</html>

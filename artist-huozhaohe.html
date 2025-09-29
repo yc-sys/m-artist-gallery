@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>霍兆和 - M Artist 艺术家</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/artists.css">
+    <link rel="stylesheet" href="css/artwork-detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="artwork-detail-page">
+    <!-- 返回按钮 -->
+    <div class="back-button">
+        <a href="artists.html"><i class="fas fa-chevron-left"></i> 返回</a>
+    </div>
+
+    <!-- 作品详情区域 -->
+    <main class="artwork-detail-container">
+        <div class="artwork-header">
+            <div class="artist-profile">
+                <img src="images/huozhaohe.jpg" alt="霍兆和" class="artist-avatar">
+                <div class="artist-info-detail">
+                    <h1>霍兆和</h1>
+                    <p class="artist-bio">霍兆和(1925年-2010年)，中国著名画家、书法家。出生于广东省广州市，毕业于广州美术学院。他的艺术创作以花鸟画和山水画为主，风格清新自然，笔墨酣畅，色彩明快，具有浓郁的岭南特色。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="artwork-content">
+            <div class="artwork-description">
+                <h2>作品详情</h2>
+                <div>
+                    <p>《岭南风情》是霍兆和的代表作之一，创作于1990年代。这幅作品以岭南地区的自然风光和人文景观为题材，展现了霍兆和对岭南文化的深刻理解和艺术表达。画面构图饱满，色彩鲜明，笔触有力，充满了生机与活力。</p>
+                    <p>霍兆和的绘画风格独特，融合了中国传统绘画技法与岭南画派的特色，形成了独树一帜的艺术语言。他的作品注重写生与创作的结合，善于捕捉自然景物的神韵，被誉为岭南画派的重要代表人物之一。</p>
+                </div>
+            </div>
+
+            <div class="artwork-buttons">
+                <div class="button-container">
+                    <a href="#" class="artwork-button artist-interview">
+                        <div class="button-icon">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <span>艺术家采访</span>
+                    </a>
+                    <a href="#" class="artwork-button artwork-video">
+                        <div class="button-icon">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                        <span>作品视频讲解</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="artwork-image-large">
+                <img src="images/huozhaohe.jpg" alt="霍兆和作品">
+            </div>
+        </div>
+    </main>
+    
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>M Artist</h3>
+                <p>我们致力于推广中国当代艺术，连接艺术家与艺术爱好者，创造一个充满活力的艺术社区。</p>
+            </div>
+            <div class="footer-column">
+                <h3>服务项目</h3>
+                <ul>
+                    <li><a href="#">艺术品展览</a></li>
+                    <li><a href="#">艺术家推广</a></li>
+                    <li><a href="#">艺术教育</a></li>
+                    <li><a href="#">艺术品销售</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>空间设计</h3>
+                <ul>
+                    <li><a href="#">展览空间</a></li>
+                    <li><a href="#">艺术工作室</a></li>
+                    <li><a href="#">艺术图书馆</a></li>
+                    <li><a href="#">艺术咖啡厅</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>关注我们</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-weixin"></i></a>
+                    <a href="#"><i class="fab fa-weibo"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 M Artist. 保留所有权利。</p>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button id="back-to-top" title="返回顶部"><i class="fas fa-arrow-up"></i></button>
+
+    <script>
+        // 返回顶部按钮
+        document.addEventListener("DOMContentLoaded", function() {
+            const backToTopButton = document.getElementById("back-to-top");
+            
+            // 设置初始样式
+            backToTopButton.style.display = "none";
+            
+            window.addEventListener("scroll", () => {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.style.display = "block";
+                } else {
+                    backToTopButton.style.display = "none";
+                }
+            });
+            
+            backToTopButton.addEventListener("click", () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+            });
+        });
+    </script>
+</body>
+</html>
