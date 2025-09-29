@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>常玉作品集 - M Artist</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/artists.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .artworks-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .artist-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+        
+        .artist-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 30px;
+        }
+        
+        .artist-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .artist-title h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .artist-title p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 600px;
+        }
+        
+        .artworks-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 25px;
+        }
+        
+        .artwork-card {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+        
+        .artwork-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .artwork-image {
+            height: 250px;
+            overflow: hidden;
+        }
+        
+        .artwork-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .artwork-card:hover .artwork-image img {
+            transform: scale(1.05);
+        }
+        
+        .artwork-info {
+            padding: 15px;
+            background-color: #fff;
+        }
+        
+        .artwork-info h3 {
+            margin: 0 0 5px;
+            font-size: 1.1rem;
+            color: #333;
+        }
+        
+        .artwork-info p {
+            color: #666;
+            font-size: 0.9rem;
+            margin: 0;
+        }
+        
+        .artwork-number {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        
+        .section-title {
+            font-size: 1.5rem;
+            margin: 30px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+            color: #333;
+        }
+        
+        .back-button {
+            margin-bottom: 20px;
+        }
+        
+        .back-button a {
+            display: inline-flex;
+            align-items: center;
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .back-button a:hover {
+            color: #1d3557;
+        }
+        
+        .back-button i {
+            margin-right: 5px;
+        }
+        
+        @media (max-width: 768px) {
+            .artist-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .artist-image {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+            
+            .artworks-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">M Artist</a>
+            <div class="nav-links">
+                <a href="index.html">首页</a>
+                <a href="artists.html" class="active">艺术家</a>
+                <a href="store.html">商店</a>
+                <a href="#">关于我们</a>
+                <a href="#">联系</a>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 作品集主体内容 -->
+    <main class="artworks-container">
+        <div class="back-button">
+            <a href="artist-changyu.html"><i class="fas fa-chevron-left"></i> 返回艺术家页面</a>
+        </div>
+        
+        <div class="artist-header">
+            <div class="artist-image">
+                <img src="images/changyu.jpg" alt="常玉">
+            </div>
+            <div class="artist-title">
+                <h1>常玉作品集</h1>
+                <p>此处是艺术家作品集，点击作品进入，作品详情页</p>
+            </div>
+        </div>
+        
+        <h2 class="section-title">人体作品</h2>
+        <div class="artworks-grid">
+            <!-- 作品1 -->
+            <div class="artwork-card">
+                <a href="artwork-changyu1.html">
+                    <div class="artwork-number">1</div>
+                    <div class="artwork-image">
+                        <img src="images/changyuart1.webp" alt="五裸女">
+                    </div>
+                    <div class="artwork-info">
+                        <h3>五裸女</h3>
+                        <p>创作于1950年代，常玉最著名的人体画作之一</p>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- 作品2 -->
+            <div class="artwork-card">
+                <a href="artwork-changyu2.html">
+                    <div class="artwork-number">2</div>
+                    <div class="artwork-image">
+                        <img src="images/changyuart2.jpg" alt="卧裸">
+                    </div>
+                    <div class="artwork-info">
+                        <h3>卧裸</h3>
+                        <p>常玉的代表性裸体画作，线条流畅，形体饱满</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        
+        <h2 class="section-title">花卉作品</h2>
+        <div class="artworks-grid">
+            <!-- 作品3 -->
+            <div class="artwork-card">
+                <a href="artwork-changyu3.html">
+                    <div class="artwork-number">3</div>
+                    <div class="artwork-image">
+                        <img src="images/changyuart3.jpg" alt="粉红花束">
+                    </div>
+                    <div class="artwork-info">
+                        <h3>粉红花束</h3>
+                        <p>常玉最著名的花卉画作之一，色彩鲜艳，构图大胆</p>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- 作品5 -->
+            <div class="artwork-card">
+                <a href="artwork-changyu5.html">
+                    <div class="artwork-number">5</div>
+                    <div class="artwork-image">
+                        <img src="images/changyuart5.jpg" alt="蓝色花卉">
+                    </div>
+                    <div class="artwork-info">
+                        <h3>蓝色花卉</h3>
+                        <p>常玉晚期的花卉作品，色彩浓郁，笔触大胆</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        
+        <h2 class="section-title">动物作品</h2>
+        <div class="artworks-grid">
+            <!-- 作品4 -->
+            <div class="artwork-card">
+                <a href="artwork-changyu4.html">
+                    <div class="artwork-number">4</div>
+                    <div class="artwork-image">
+                        <img src="images/baihe.jpg" alt="白鹤">
+                    </div>
+                    <div class="artwork-info">
+                        <h3>白鹤</h3>
+                        <p>常玉的代表作之一，以简洁的线条勾勒出白鹤的优雅姿态</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+    
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>M Artist</h3>
+                <p>我们致力于推广中国当代艺术，连接艺术家与艺术爱好者，创造一个充满活力的艺术社区。</p>
+            </div>
+            <div class="footer-column">
+                <h3>服务项目</h3>
+                <ul>
+                    <li><a href="javascript:void(0);">艺术品展览</a></li>
+                    <li><a href="javascript:void(0);">艺术家推广</a></li>
+                    <li><a href="javascript:void(0);">艺术教育</a></li>
+                    <li><a href="store.html">艺术品销售</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>空间设计</h3>
+                <ul>
+                    <li><a href="javascript:void(0);">展览空间</a></li>
+                    <li><a href="javascript:void(0);">艺术工作室</a></li>
+                    <li><a href="javascript:void(0);">艺术图书馆</a></li>
+                    <li><a href="javascript:void(0);">艺术咖啡厅</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>关注我们</h3>
+                <div class="social-icons">
+                    <a href="javascript:void(0);"><i class="fab fa-weixin"></i></a>
+                    <a href="javascript:void(0);"><i class="fab fa-weibo"></i></a>
+                    <a href="javascript:void(0);"><i class="fab fa-instagram"></i></a>
+                    <a href="javascript:void(0);"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 M Artist. 保留所有权利。</p>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button id="back-to-top" title="返回顶部"><i class="fas fa-arrow-up"></i></button>
+
+    <script>
+        // 返回顶部按钮
+        document.addEventListener("DOMContentLoaded", function() {
+            const backToTopButton = document.getElementById("back-to-top");
+            
+            // 设置初始样式
+            backToTopButton.style.display = "none";
+            
+            window.addEventListener("scroll", () => {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.style.display = "block";
+                } else {
+                    backToTopButton.style.display = "none";
+                }
+            });
+            
+            backToTopButton.addEventListener("click", () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+            });
+        });
+    </script>
+</body>
+</html>

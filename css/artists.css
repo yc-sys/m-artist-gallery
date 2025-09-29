@@ -7,6 +7,18 @@ body.artists-page {
     padding: 0;
 }
 
+/* 作品分类样式 */
+.artwork-categories {
+    margin-bottom: 40px;
+}
+
+.artwork-categories h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
 /* 返回按钮样式 */
 .back-button {
     position: fixed;
