@@ -40,4 +40,22 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    // Video button handler (opens provided data-video URL or shows placeholder)
+    const videoButtons = document.querySelectorAll('.video-button');
+    videoButtons.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            const url = this.getAttribute('data-video');
+            if (url && url !== '#') {
+                // Allow default navigation if target is set to _blank
+                if (!this.hasAttribute('target')) {
+                    e.preventDefault();
+                }
+                window.open(url, '_blank');
+            } else {
+                e.preventDefault();
+                alert('该作品的视频讲解将稍后上线，敬请期待。');
+            }
+        });
+    });
 });

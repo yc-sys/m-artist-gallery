@@ -165,7 +165,7 @@
 
 .main-artwork-image {
     max-width: 100%;
-    max-height: 600px;
+    max-height: 450px;
     object-fit: contain;
     border-radius: 5px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
