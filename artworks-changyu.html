@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>常玉作品集 - M Artist</title>
+    <title>常玉 - 作品集 | M Artist 艺术家</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/artists.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -11,243 +11,106 @@
 <body class="artists-page">
     <!-- 返回按钮 -->
     <div class="back-button">
-        <a href="index.html"><i class="fas fa-chevron-left"></i> 返回</a>
+        <a href="artists.html"><i class="fas fa-chevron-left"></i> 返回</a>
     </div>
 
-    <!-- 顶部导航栏 -->
-    <header class="art-categories">
-        <nav class="categories-nav">
-            <ul>
-                <li><a href="#paintings">画作</a></li>
-                <li><a href="#calligraphy">书法</a></li>
-                <li><a href="#academy">美院毕业作品</a></li>
-                <li><a href="#installation">装置艺术</a></li>
-                <li><a href="#contemporary">当代艺术</a></li>
-                <li><a href="#sculpture">雕塑作品</a></li>
-                <li><a href="#photography">摄影作品</a></li>
-                <li><a href="#exhibition">近期展览</a></li>
-                <li class="more-dropdown">
-                    <a href="#more">更多</a>
-                    <div class="dropdown-content">
-                        <a href="#art-products">艺术商品</a>
-                        <a href="#home-gallery">家居馆</a>
-                        <a href="#home-design">家居设计</a>
-                        <a href="#cultural-creative">文创</a>
-                    </div>
-                </li>
-            </ul>
-        </nav>
-    </header>
+    <!-- 页面头部：艺术家信息 -->
+    <section class="container artist-profile">
+        <div class="artist-header">
+            <div class="artist-portrait">
+                <img src="images/changyu.jpg" alt="常玉肖像">
+            </div>
+            <div class="artist-bio">
+                <h1>常玉</h1>
+                <p class="artist-years">1901-1966</p>
+                <p>中国现代油画家，被誉为“东方的马蒂斯”。作品以花卉、人体与动物题材著称，风格简练而富有韵味。</p>
+            </div>
+        </div>
+    </section>
 
-    <div class="container">
-        <!-- 艺术家信息 -->
-        <div class="artist-profile">
-            <div class="artist-header">
-                <div class="artist-portrait">
-                    <img src="images/changyu.jpg" alt="常玉">
+    <!-- 艺术家媒体按钮 -->
+    <section class="artist-media-buttons">
+        <a href="#" class="media-button video-button" data-video="#">
+            <i class="fas fa-play-circle"></i>
+            <span>作品视频讲解</span>
+        </a>
+        <a href="store.html" class="media-button" target="_blank">
+            <i class="fas fa-store"></i>
+            <span>进入作品商店</span>
+        </a>
+    </section>
+
+    <!-- 作品展示网格 -->
+    <section class="artists-gallery">
+        <h2 class="section-title">作品一览</h2>
+        <div class="artists-row">
+            <!-- 作品1 -->
+            <article class="artwork-card">
+                <div class="artwork-image">
+                    <a href="artwork-changyu1.html"><img src="images/changyuart1.webp" alt="作品一"></a>
                 </div>
-                <div class="artist-bio">
-                    <h1 class="artist-name">常玉</h1>
-                    <p class="artist-years">1901-1966</p>
-                    <p class="artist-description">中国现代油画家，被誉为"东方的马蒂斯"。旅法画家，以花卉、人体和动物画著称。</p>
-                    <div class="artist-store">
-                        <a href="store.html">常玉官方旗舰店</a>
-                    </div>
+                <div class="artwork-info">
+                    <h3 class="artwork-title"><a href="artwork-changyu1.html">作品一</a></h3>
                 </div>
-            </div>
+            </article>
+
+            <!-- 作品2 -->
+            <article class="artwork-card">
+                <div class="artwork-image">
+                    <a href="artwork-changyu2.html"><img src="images/changyuart2.jpg" alt="作品二"></a>
+                </div>
+                <div class="artwork-info">
+                    <h3 class="artwork-title"><a href="artwork-changyu2.html">作品二</a></h3>
+                </div>
+            </article>
+
+            <!-- 作品3 -->
+            <article class="artwork-card">
+                <div class="artwork-image">
+                    <a href="artwork-changyu3.html"><img src="images/changyuart3.jpg" alt="作品三"></a>
+                </div>
+                <div class="artwork-info">
+                    <h3 class="artwork-title"><a href="artwork-changyu3.html">作品三</a></h3>
+                </div>
+            </article>
+
+            <!-- 作品4 -->
+            <article class="artwork-card">
+                <div class="artwork-image">
+                    <a href="artwork-changyu4.html"><img src="images/baihe.jpg" alt="作品四"></a>
+                </div>
+                <div class="artwork-info">
+                    <h3 class="artwork-title"><a href="artwork-changyu4.html">作品四</a></h3>
+                </div>
+            </article>
+
+            <!-- 作品5 -->
+            <article class="artwork-card">
+                <div class="artwork-image">
+                    <a href="artwork-changyu5.html"><img src="images/changyuart5.jpg" alt="作品五"></a>
+                </div>
+                <div class="artwork-info">
+                    <h3 class="artwork-title"><a href="artwork-changyu5.html">作品五</a></h3>
+                </div>
+            </article>
         </div>
-        
-        <!-- 艺术家视频和介绍按钮 -->
-        <div class="artist-media-buttons">
-            <a href="#video" class="media-button video-button">
-                <i class="fas fa-video"></i>
-                <span>艺术家采访</span>
-            </a>
-            <a href="#bio" class="media-button bio-button">
-                <i class="fas fa-user"></i>
-                <span>艺术生平介绍</span>
-            </a>
-        </div>
-        
-        <!-- 代表作品区域 -->
-        <section class="artwork-section">
-            <h2 class="section-title">代表作品</h2>
-            <div class="artwork-grid">
-                <div class="artwork-item">
-                    <div class="artwork-image">
-                        <a href="artwork-detail.html">
-                            <img src="images/changyuart1.webp" alt="常玉作品1">
-                        </a>
-                    </div>
-                    <div class="artwork-info">
-                        <h3 class="artwork-title">花卉</h3>
-                        <p class="artwork-year">1940年代</p>
-                    </div>
-                </div>
-                
-                <div class="artwork-item">
-                    <div class="artwork-image">
-                        <a href="artwork-detail.html">
-                            <img src="images/changyuart2.jpg" alt="常玉作品2">
-                        </a>
-                    </div>
-                    <div class="artwork-info">
-                        <h3 class="artwork-title">裸女与花</h3>
-                        <p class="artwork-year">1950年代</p>
-                    </div>
-                </div>
-                
-                <div class="artwork-item">
-                    <div class="artwork-image">
-                        <a href="artwork-detail.html">
-                            <img src="images/changyuart3.jpg" alt="常玉作品3">
-                        </a>
-                    </div>
-                    <div class="artwork-info">
-                        <h3 class="artwork-title">静物</h3>
-                        <p class="artwork-year">1930年代</p>
-                    </div>
-                </div>
-                
-                <div class="artwork-item">
-                    <div class="artwork-image">
-                        <a href="artwork-detail.html">
-                            <img src="images/changyuart5.jpg" alt="常玉作品5">
-                        </a>
-                    </div>
-                    <div class="artwork-info">
-                        <h3 class="artwork-title">花瓶</h3>
-                        <p class="artwork-year">1945年</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- 人体作品区域 -->
-        <section class="artwork-section">
-            <h2 class="section-title">人体作品</h2>
-            <div class="artwork-grid">
-                <div class="artwork-item">
-                    <div class="artwork-image">
-                        <a href="artwork-detail.html">
-                            <img src="images/baihe.jpg" alt="常玉人体作品">
-                        </a>
-                    </div>
-                    <div class="artwork-info">
-                        <h3 class="artwork-title">裸女与百合</h3>
-                        <p class="artwork-year">1950年</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+    </section>
+
+    <!-- 回到顶部按钮 -->
+    <div class="back-to-top">
+        <a href="#" id="topBtn">顶部</a>
     </div>
-    
+
+    <!-- 页脚 -->
     <footer class="site-footer">
         <div class="footer-content">
             <p>&copy; 2025 M Artist 艺术家. 保留所有权利。</p>
         </div>
     </footer>
-    
+
     <script src="js/main.js"></script>
 </body>
 </html>
-            .artwork-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-        
-        @media (max-width: 576px) {
-            .artwork-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-    </style>
-</head>
-<body>
-    <header class="header">
-        <a href="artist-changyu.html" class="back-link">&lt; 返回</a>
-    </header>
-
-    <div class="container">
-        <h2 class="category-title">代表作品</h2>
-        <div class="artwork-grid">
-            <a href="#" class="artwork-item">
-                <div class="artwork-image">
-                    <img src="images/changyuart1.webp" alt="五裸女">
-                </div>
-                <div class="artwork-info">
-                    <h3 class="artwork-title">五裸女</h3>
-                    <p class="artwork-year">1950年代</p>
-                </div>
-            </a>
-            
-            <a href="#" class="artwork-item">
-                <div class="artwork-image">
-                    <img src="images/changyuart2.jpg" alt="卧裸">
-                </div>
-                <div class="artwork-info">
-                    <h3 class="artwork-title">卧裸</h3>
-                    <p class="artwork-year">1940年代</p>
-                </div>
-            </a>
-            
-            <a href="#" class="artwork-item">
-                <div class="artwork-image">
-                    <img src="images/changyuart3.jpg" alt="粉红花束">
-                </div>
-                <div class="artwork-info">
-                    <h3 class="artwork-title">粉红花束</h3>
-                    <p class="artwork-year">1940年代</p>
-                </div>
-            </a>
-            
-            <a href="#" class="artwork-item">
-                <div class="artwork-image">
-                    <img src="images/baihe.jpg" alt="白鹤">
-                </div>
-                <div class="artwork-info">
-                    <h3 class="artwork-title">白鹤</h3>
-                    <p class="artwork-year">1950年代</p>
-                </div>
-            </a>
-            
-            <a href="#" class="artwork-item">
-                <div class="artwork-image">
-                    <img src="images/changyuart5.jpg" alt="蓝色花卉">
-                </div>
-                <div class="artwork-info">
-                    <h3 class="artwork-title">蓝色花卉</h3>
-                    <p class="artwork-year">1950年代</p>
-                </div>
-            </a>
-        </div>
-        
-        <h2 class="category-title">人体作品</h2>
-        <div class="artwork-grid">
-            <a href="#" class="artwork-item">
-                <div class="artwork-image">
-                    <img src="images/changyuart1.webp" alt="裸女与花">
-                </div>
-                <div class="artwork-info">
-                    <h3 class="artwork-title">裸女与花</h3>
-                    <p class="artwork-year">1930年代</p>
-                </div>
-            </a>
-            
-            <a href="#" class="artwork-item">
-                <div class="artwork-image">
-                    <img src="images/changyuart2.jpg" alt="四裸女">
-                </div>
-                <div class="artwork-info">
-                    <h3 class="artwork-title">四裸女</h3>
-                    <p class="artwork-year">1950年代</p>
-                </div>
-            </a>
-            
-            <a href="#" class="artwork-item">
-                <div class="artwork-image">
-                    <img src="images/changyuart1.webp" alt="侧卧裸女">
-                </div>
                 <div class="artwork-info">
                     <h3 class="artwork-title">侧卧裸女</h3>
                     <p class="artwork-year">1940年代</p>
