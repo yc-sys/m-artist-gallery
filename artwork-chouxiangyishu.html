@@ -3,123 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>抽象艺术 - M Artist 艺术家</title>
+    <title>抽象艺术 - 作品集 | M Artist 艺术家</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/artists.css">
-    <link rel="stylesheet" href="css/artwork-detail.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body class="artwork-detail-page">
+<body class="artists-page">
     <!-- 返回按钮 -->
     <div class="back-button">
         <a href="artists.html"><i class="fas fa-chevron-left"></i> 返回</a>
     </div>
 
-    <!-- 作品详情区域 -->
-    <main class="artwork-detail-container">
-        <div class="artwork-header">
-            <div class="artist-profile">
-                <img src="images/placeholder.txt" alt="艺术家" class="artist-avatar">
-                <div class="artist-info-detail">
-                    <h1>抽象艺术家</h1>
-                    <p class="artist-bio">这位艺术家专注于抽象艺术创作，通过非具象的形式和色彩表达情感和思想。作品打破传统视觉规则，创造出独特的视觉体验和情感共鸣。</p>
-                </div>
+    <!-- 页面头部：系列信息 -->
+    <section class="container artist-profile">
+        <div class="artist-header">
+            <div class="artist-portrait">
+                <img src="images/artist-default.jpg" alt="抽象艺术">
+            </div>
+            <div class="artist-bio">
+                <h1>抽象艺术</h1>
+                <p>以形式、色彩与线条为核心语言，探索抽象表达的艺术系列。</p>
             </div>
         </div>
+    </section>
 
-        <div class="artwork-content">
-            <div class="artwork-description">
-                <h2>作品详情 - 抽象艺术</h2>
-                <div>
-                    <p>《抽象艺术》是一幅充满表现力和想象力的抽象作品。艺术家摒弃了具象的表达方式，通过丰富的色彩、动态的线条和独特的构图，创造出一个充满活力和情感的视觉空间。作品中的色彩对比强烈，线条流动自由，形成了一种独特的视觉节奏和韵律。</p>
-                    <p>这幅作品不受现实形象的限制，直接表达艺术家的内心情感和哲学思考。观众可以从中感受到艺术家对生命、自由和创造力的热爱，以及对传统艺术形式的突破和创新。每个人都可以根据自己的经验和感受，在作品中找到不同的解读和共鸣，这正是抽象艺术的魅力所在。</p>
+    <!-- 媒体按钮 -->
+    <section class="artist-media-buttons">
+        <a href="#" class="media-button video-button" data-video="#">
+            <i class="fas fa-play-circle"></i>
+            <span>作品视频讲解</span>
+        </a>
+        <a href="#abstract-store" class="media-button" target="_blank">
+            <i class="fas fa-store"></i>
+            <span>进入作品商店</span>
+        </a>
+    </section>
+
+    <!-- 作品展示网格 -->
+    <section class="artists-gallery">
+        <h2 class="section-title">作品一览 <span class="work-count">（共2件）</span></h2>
+        <div class="artists-row">
+            <article class="artwork-card">
+                <div class="artwork-image">
+                    <a href="artwork-chouxiangyishu1.html"><img src="images/chouxiangyishuart1.png" alt="作品一"></a>
                 </div>
-            </div>
-
-            <div class="artwork-buttons">
-                <div class="button-container">
-                    <a href="#" class="artwork-button artist-interview">
-                        <div class="button-icon">
-                            <i class="fas fa-video"></i>
-                        </div>
-                        <span>艺术家采访</span>
-                    </a>
-                    <a href="#" class="artwork-button artwork-video">
-                        <div class="button-icon">
-                            <i class="fas fa-play-circle"></i>
-                        </div>
-                        <span>作品视频讲解</span>
-                    </a>
+                <div class="artwork-info">
+                    <h3 class="artwork-title"><a href="artwork-chouxiangyishu1.html">作品一</a></h3>
                 </div>
-            </div>
-
-            <div class="artwork-image-large">
-                <img src="images/chouxiangyishu.png" alt="抽象艺术">
-            </div>
+            </article>
+            <article class="artwork-card">
+                <div class="artwork-image">
+                    <a href="artwork-chouxiangyishu2.html"><img src="images/chouxiangyishuart2.jpg" alt="作品二"></a>
+                </div>
+                <div class="artwork-info">
+                    <h3 class="artwork-title"><a href="artwork-chouxiangyishu2.html">作品二</a></h3>
+                </div>
+            </article>
         </div>
-    </main>
-    
+    </section>
+
+    <!-- 回到顶部按钮 -->
+    <div class="back-to-top">
+        <a href="#" id="topBtn">顶部</a>
+    </div>
+
     <!-- 页脚 -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-column">
-                <h3>M Artist</h3>
-                <p>我们致力于推广中国当代艺术，连接艺术家与艺术爱好者，创造一个充满活力的艺术社区。</p>
-            </div>
-            <div class="footer-column">
-                <h3>服务项目</h3>
-                <ul>
-                    <li><a href="#">艺术品展览</a></li>
-                    <li><a href="#">艺术家推广</a></li>
-                    <li><a href="#">艺术教育</a></li>
-                    <li><a href="#">艺术品销售</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>空间设计</h3>
-                <ul>
-                    <li><a href="#">展览空间</a></li>
-                    <li><a href="#">艺术工作室</a></li>
-                    <li><a href="#">艺术图书馆</a></li>
-                    <li><a href="#">艺术咖啡厅</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>关注我们</h3>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-weixin"></i></a>
-                    <a href="#"><i class="fab fa-weibo"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2023 M Artist. 保留所有权利。</p>
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; 2025 M Artist 艺术家. 保留所有权利。</p>
         </div>
     </footer>
 
-    <!-- 返回顶部按钮 -->
-    <button id="back-to-top" title="返回顶部"><i class="fas fa-arrow-up"></i></button>
-
-    <script>
-        // 返回顶部按钮
-        const backToTopButton = document.getElementById("back-to-top");
-        
-        window.addEventListener("scroll", () => {
-            if (window.pageYOffset > 300) {
-                backToTopButton.style.display = "block";
-            } else {
-                backToTopButton.style.display = "none";
-            }
-        });
-        
-        backToTopButton.addEventListener("click", () => {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-        });
-    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>
