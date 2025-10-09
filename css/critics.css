@@ -1,0 +1,289 @@
+/* 评人页面 - 小红书风格 */
+
+body.critics-page {
+    background: #fff;
+    color: #222;
+}
+
+/* 顶部标题与搜索选项栏 */
+.page-header {
+    position: sticky;
+    top: 0;
+    background: rgba(255,255,255,0.95);
+    border-bottom: 1px solid #eee;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    z-index: 2000;
+}
+
+.header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.header-title {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.header-right { display: flex; align-items: center; gap: 12px; }
+
+.home-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    color: #333;
+    background: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 999px;
+    transition: all 0.2s ease;
+    font-size: 14px;
+    font-weight: 500;
+}
+.home-button:hover { background: #eee; }
+
+.search-options {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+}
+
+.search-options .option, .search-options a.option {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 12px;
+    font-size: 14px;
+    color: #333;
+    background: #f7f7f7;
+    border-radius: 999px;
+    transition: all 0.2s ease;
+    font-weight: 500;
+}
+
+.search-options .option:hover {
+    background: #eee;
+}
+
+.dropdown { position: relative; }
+.dropdown-toggle i { margin-left: 4px; font-size: 12px; }
+.dropdown-menu {
+    position: absolute;
+    right: 0;
+    top: 110%;
+    display: none;
+    min-width: 180px;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+    padding: 8px 0;
+}
+.dropdown:hover .dropdown-menu { display: block; }
+.dropdown-menu li { list-style: none; }
+.dropdown-menu a {
+    display: block;
+    padding: 10px 12px;
+    color: #333;
+    font-size: 14px;
+}
+.dropdown-menu a:hover { background: #f5f5f5; }
+
+.critic-profile-header {
+    background: linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.1) 100%), url('../images/hero-bg-new.jpg') center/cover no-repeat;
+    padding: 40px 0;
+    color: #fff;
+}
+
+.critic-profile {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.critic-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255,255,255,0.8);
+}
+
+.critic-info h1 {
+    margin: 0 0 6px 0;
+    font-size: 24px;
+}
+
+.critic-bio {
+    margin: 0 0 8px 0;
+    opacity: 0.95;
+}
+
+.critic-meta {
+    display: flex;
+    gap: 16px;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* 瀑布流区域 */
+.masonry-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 16px 40px; /* 去除底部导航预留空间 */
+}
+
+.masonry-grid {
+    column-count: 4;
+    column-gap: 16px;
+}
+
+@media (max-width: 1200px) {
+    .masonry-grid { column-count: 3; }
+}
+@media (max-width: 900px) {
+    .masonry-grid { column-count: 2; }
+}
+@media (max-width: 600px) {
+    .masonry-grid { column-count: 1; }
+}
+
+@media (max-width: 768px) {
+    .header-inner { flex-direction: column; align-items: flex-start; }
+    .header-title { font-size: 18px; }
+    .search-options { gap: 8px; }
+    .search-input { width: 100%; }
+}
+
+.review-card {
+    break-inside: avoid;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+    margin: 0 0 16px 0;
+    overflow: hidden;
+    transition: transform 0.2s ease;
+}
+
+.review-card:hover { transform: translateY(-2px); }
+
+.review-cover {
+    width: 100%;
+    display: block;
+}
+
+.review-content {
+    padding: 12px 14px 0 14px;
+}
+
+.review-title {
+    font-size: 16px;
+    margin: 0 0 6px 0;
+}
+
+.review-summary {
+    color: #666;
+    font-size: 13px;
+    line-height: 1.6;
+    margin: 0 0 10px 0;
+}
+
+.review-meta {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    padding: 8px 14px 14px 14px;
+    font-size: 13px;
+    color: #888;
+}
+
+.review-meta i.fa-heart { color: #e74c3c; }
+.review-meta i.fa-bookmark { color: #f1c40f; }
+.review-meta i.fa-comment-dots { color: #3498db; }
+
+/* 底部导航样式移除 */
+.header-search {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 10px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 999px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+.header-search i { color: #888; }
+.search-input {
+    border: none;
+    outline: none;
+    width: 220px;
+    font-size: 14px;
+}
+.search-input::placeholder { color: #999; }
+
+/* ---- Header Compact Overrides (reduce height, single-line layout) ---- */
+.header-inner {
+    padding: 8px 12px;
+    gap: 8px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.header-title {
+    font-size: 18px;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+}
+
+.header-right {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+.search-options {
+    display: inline-flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 8px;
+}
+.search-options .option, .search-options a.option {
+    padding: 4px 10px;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.home-button {
+    padding: 4px 10px;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.header-search {
+    gap: 6px;
+    padding: 4px 8px;
+    white-space: nowrap;
+}
+.search-input {
+    width: 160px;
+    font-size: 13px;
+}
+
+@media (max-width: 768px) {
+    .header-inner { flex-direction: row; align-items: center; }
+    .header-title { font-size: 16px; }
+    .search-options { gap: 6px; }
+    .search-input { width: 140px; }
+}

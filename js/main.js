@@ -1,24 +1,30 @@
 // JavaScript functionality for the website
 document.addEventListener('DOMContentLoaded', function() {
-    // Back to top button functionality
-    const topBtn = document.getElementById('topBtn');
-    if (topBtn) {
-        // Show/hide button based on scroll position
-        window.addEventListener('scroll', function() {
-            if (window.pageYOffset > 300) {
-                topBtn.style.display = 'block';
-            } else {
-                topBtn.style.display = 'none';
-            }
-        });
+    // Back to top button functionality (supports multiple markup variants)
+    const backToTopAnchor = document.getElementById('topBtn')
+        || document.querySelector('.back-to-top a')
+        || document.getElementById('back-to-top');
+    const backToTopContainer = document.querySelector('.back-to-top')
+        || document.getElementById('back-to-top');
+    const toggleEl = backToTopContainer || backToTopAnchor;
 
-        // Smooth scroll to top when clicked
-        topBtn.addEventListener('click', function(e) {
+    if (toggleEl) {
+        // Show/hide based on scroll position
+        const onScroll = () => {
+            if (window.pageYOffset > 100) {
+                toggleEl.style.display = 'block';
+            } else {
+                toggleEl.style.display = 'none';
+            }
+        };
+        window.addEventListener('scroll', onScroll);
+        onScroll();
+
+        // Click to scroll to top smoothly
+        const clickTarget = backToTopAnchor || toggleEl;
+        clickTarget.addEventListener('click', function(e) {
             e.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     }
 
@@ -58,4 +64,37 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    // Critics page: search filter for review cards
+    const searchInput = document.getElementById('criticSearch');
+    if (searchInput) {
+        const cards = Array.from(document.querySelectorAll('.review-card'));
+        const normalize = (s) => (s || '').toLowerCase().trim();
+        const getText = (el, sel) => {
+            const n = el.querySelector(sel);
+            return n ? n.textContent : '';
+        };
+
+        const filterCards = (q) => {
+            const query = normalize(q);
+            if (!query) {
+                cards.forEach(c => c.style.display = '');
+                return;
+            }
+            cards.forEach(card => {
+                const title = normalize(getText(card, '.review-title'));
+                const summary = normalize(getText(card, '.review-summary'));
+                const match = title.includes(query) || summary.includes(query);
+                card.style.display = match ? '' : 'none';
+            });
+        };
+
+        // Input handler with light debounce
+        let t = null;
+        searchInput.addEventListener('input', (e) => {
+            clearTimeout(t);
+            const val = e.target.value;
+            t = setTimeout(() => filterCards(val), 150);
+        });
+    }
 });
