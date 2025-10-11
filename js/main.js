@@ -47,6 +47,73 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // "更多" 下拉菜单：点击展开并在滚动或鼠标移出后延迟关闭，提升可用性
+    const moreDropdown = document.querySelector('.more-dropdown');
+    if (moreDropdown) {
+        const toggle = moreDropdown.querySelector('.dropdown-toggle');
+        const menu = moreDropdown.querySelector('.dropdown-content');
+        let closeTimer = null;
+
+        const setExpanded = (open) => {
+            if (toggle) toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        };
+
+        const openMenu = () => {
+            moreDropdown.classList.add('open');
+            setExpanded(true);
+            clearTimeout(closeTimer);
+        };
+
+        const closeMenu = () => {
+            moreDropdown.classList.remove('open');
+            setExpanded(false);
+        };
+
+        if (toggle) {
+            toggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                if (moreDropdown.classList.contains('open')) {
+                    closeMenu();
+                } else {
+                    openMenu();
+                }
+            });
+        }
+
+        if (menu) {
+            menu.addEventListener('mouseenter', () => clearTimeout(closeTimer));
+        }
+
+        moreDropdown.addEventListener('mouseleave', () => {
+            clearTimeout(closeTimer);
+            closeTimer = setTimeout(closeMenu, 1500); // 鼠标移出后 1.5s 再关闭
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!moreDropdown.contains(e.target)) {
+                closeMenu();
+            }
+        });
+
+        window.addEventListener('scroll', () => {
+            if (moreDropdown.classList.contains('open')) {
+                clearTimeout(closeTimer);
+                closeTimer = setTimeout(closeMenu, 2000); // 滚动时保持至少 2s 可见
+            }
+        });
+
+        // 保障“艺术商品”入口点击后可靠跳转
+        const artProductLink = moreDropdown.querySelector('.dropdown-content a[href="art-product.html"]');
+        if (artProductLink) {
+            artProductLink.addEventListener('click', (e) => {
+                // 防止外层监听造成的提前关闭或阻断
+                e.stopPropagation();
+                // 明确执行页面跳转
+                window.location.href = 'art-product.html';
+            });
+        }
+    }
+
     // Video button handler (opens provided data-video URL or shows placeholder)
     const videoButtons = document.querySelectorAll('.video-button');
     videoButtons.forEach(btn => {

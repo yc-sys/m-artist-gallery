@@ -7,6 +7,41 @@ body.artists-page {
     padding: 0;
 }
 
+/* 增强“更多”下拉菜单的可见性与过渡动画 */
+.more-dropdown.open .dropdown-content {
+    display: block;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+    pointer-events: auto;
+    z-index: 999; /* 置顶确保不被下方卡片遮挡 */
+}
+
+.dropdown-cta {
+    font-weight: 600;
+    color: #fff !important;
+    background-color: #4169E1;
+    margin: 4px 8px 8px;
+    border-radius: 6px;
+}
+.dropdown-cta:hover {
+    background-color: #3a5ecc;
+}
+
+/* 基础过渡（不覆盖原有规则，追加以实现动画） */
+.dropdown-content {
+    opacity: 0;
+    transform: translateX(-50%) translateY(8px);
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.more-dropdown:hover .dropdown-content {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+    pointer-events: auto;
+    z-index: 999;
+}
+
 /* 作品分类样式 */
 .artwork-categories {
     margin-bottom: 40px;
