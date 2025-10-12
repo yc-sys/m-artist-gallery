@@ -38,6 +38,10 @@
 }
 .back-button:hover { color: var(--text-1); }
 
+/* 文创页面顶部元素微调，避免与返回按钮视觉重叠 */
+.page-header .back-button { position: static; }
+.page-header .page-title { margin-left: -6px; }
+
 /* 主体布局 */
 .product-page {
   max-width: 1080px;
@@ -131,4 +135,6 @@
 /* 响应式微调 */
 @media (max-width: 600px) {
   .page-title { font-size: 18px; }
+  /* 移动端再微调一点，保证按钮与标题间距清晰 */
+  .page-header .page-title { margin-left: -4px; }
 }

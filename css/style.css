@@ -179,6 +179,42 @@ ul {
     .footer-bottom .bottom-inner { flex-direction: column; align-items: flex-start; }
 }
 
+/* ---- Footer refinement: spacing, typography, alignment ---- */
+/* Enhance visual rhythm while keeping existing palette consistent */
+.site-footer { margin-top: 56px; }
+.site-footer .footer-inner { padding: 36px 20px; }
+.site-footer .footer-top { gap: 28px; align-items: start; }
+.footer-brand .logo { font-size: 22px; letter-spacing: 0.6px; margin-bottom: 4px; }
+.footer-brand .tagline { font-size: 14px; color: #6b7280; }
+.footer-col h4 { font-size: 15px; font-weight: 600; letter-spacing: 0.02em; text-transform: none; margin-bottom: 12px; }
+.footer-col li { margin: 10px 0; }
+.footer-col a { line-height: 1.6; }
+.footer-meta { font-size: 14px; line-height: 1.7; }
+.footer-bottom { margin-top: 20px; padding: 16px 0; }
+.footer-bottom .bottom-inner { gap: 16px; }
+.footer-social a { font-size: 18px; }
+
+/* Support pages using simplified footer structures */
+.site-footer .footer-content { max-width: 1200px; margin: 0 auto; padding: 36px 20px; }
+
+/* Harmonize legacy footer markup to match site-footer styling */
+footer.footer { background: #f9fafb; border-top: 1px solid #e5e7eb; margin-top: 56px; }
+.footer-container { max-width: 1200px; margin: 0 auto; padding: 36px 20px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px; }
+.footer-column h4 { font-size: 15px; font-weight: 600; letter-spacing: 0.02em; margin: 0 0 12px 0; color: #111827; }
+.footer-column ul { padding: 0; margin: 0; }
+.footer-column li { list-style: none; margin: 10px 0; }
+.footer-column a { color: #374151; line-height: 1.6; transition: color 0.2s ease; }
+.footer-column a:hover { color: #111827; }
+.footer-bottom { border-top: 1px solid #e5e7eb; }
+
+@media (max-width: 900px) {
+  .footer-container { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 576px) {
+  .footer-container { grid-template-columns: 1fr; gap: 16px; }
+  .footer-bottom .bottom-inner { align-items: center; text-align: center; }
+}
+
 /* Back-to-Top Button */
 .back-to-top {
     position: fixed;
