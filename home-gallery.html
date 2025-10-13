@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>家居馆 - M Artist</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/artists.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+    <!-- 返回上一页按钮 -->
+    <div class="back-button">
+        <a href="javascript:history.back()"><i class="fas fa-chevron-left"></i> 返回上一页</a>
+    </div>
+
+    <!-- 顶部分类导航（与既有风格一致） -->
+    <header class="art-categories">
+        <nav class="categories-nav">
+            <ul>
+                <li><a href="#tea-table">茶台</a></li>
+                <li><a href="#dining-table">餐桌</a></li>
+                <li><a href="#sofa">沙发</a></li>
+                <li><a href="#chair">椅子</a></li>
+                <li><a href="#decor">艺术摆件</a></li>
+                <li><a href="#bed">床</a></li>
+                <li><a href="#coffee-table">茶几</a></li>
+                <li><a href="#curtain">窗帘</a></li>
+                <li><a href="#floor">地板</a></li>
+                <li><a href="#tile">瓷砖</a></li>
+                <li class="more-dropdown">
+                    <a href="#more" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">更多</a>
+                    <div class="dropdown-content" role="menu" aria-label="更多">
+                        <a href="#bathroom">卫浴</a>
+                        <a href="#lighting">灯具</a>
+                        <a href="#bench">长凳</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 家居馆图片画廊（复用卡片栅格样式） -->
+    <main class="artists-gallery">
+        <h1 class="section-title">艺术家居展示</h1>
+
+        <div class="artists-row" id="tea-table">
+            <div class="artwork-card">
+                <div class="artwork-image">
+                    <img src="https://source.unsplash.com/800x800/?tea,table,furniture" alt="茶台" />
+                </div>
+                <div class="artwork-info">
+                    <h3>现代茶台组合</h3>
+                    <p>原木与石材结合，适配现代茶室。</p>
+                </div>
+            </div>
+            <div class="artwork-card">
+                <div class="artwork-image">
+                    <img src="https://source.unsplash.com/800x800/?tea,ceremony,table" alt="茶台" />
+                </div>
+                <div class="artwork-info">
+                    <h3>禅意茶席</h3>
+                    <p>低矮茶几，简洁线条突出空间气质。</p>
+                </div>
+            </div>
+            <div class="artwork-card">
+                <div class="artwork-image">
+                    <img src="https://source.unsplash.com/800x800/?wood,table,oriental" alt="茶台" />
+                </div>
+                <div class="artwork-info">
+                    <h3>实木茶台</h3>
+                    <p>精选木材与自然纹理，沉稳大气。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="artists-row" id="dining-table">
+            <div class="artwork-card">
+                <div class="artwork-image">
+                    <img src="https://source.unsplash.com/800x800/?dining,table" alt="餐桌" />
+                </div>
+                <div class="artwork-info">
+                    <h3>餐桌套系</h3>
+                    <p>皮革座椅与木质桌面，温润舒适。</p>
+                </div>
+            </div>
+            <div class="artwork-card">
+                <div class="artwork-image">
+                    <img src="https://source.unsplash.com/800x800/?table,kitchen" alt="餐桌" />
+                </div>
+                <div class="artwork-info">
+                    <h3>轻奢餐桌</h3>
+                    <p>大理石纹理与金属脚架，稳重时尚。</p>
+                </div>
+            </div>
+            <div class="artwork-card">
+                <div class="artwork-image">
+                    <img src="https://source.unsplash.com/800x800/?dining,chairs" alt="餐椅" />
+                </div>
+                <div class="artwork-info">
+                    <h3>弧形餐椅</h3>
+                    <p>符合人体工学，提升就餐舒适度。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="artists-row" id="sofa">
+            <div class="artwork-card">
+                <div class="artwork-image">
+                    <img src="https://source.unsplash.com/800x800/?sofa,livingroom" alt="沙发" />
+                </div>
+                <div class="artwork-info">
+                    <h3>模块化沙发</h3>
+                    <p>自由拼接，适配多种客厅布局。</p>
+                </div>
+            </div>
+            <div class="artwork-card">
+                <div class="artwork-image">
+                    <img src="https://source.unsplash.com/800x800/?sofa,modern" alt="沙发" />
+                </div>
+                <div class="artwork-info">
+                    <h3>云感沙发</h3>
+                    <p>高回弹填充，坐感柔软且支撑足。</p>
+                </div>
+            </div>
+            <div class="artwork-card">
+                <div class="artwork-image">
+                    <img src="https://source.unsplash.com/800x800/?armchair,design" alt="扶手椅" />
+                </div>
+                <div class="artwork-info">
+                    <h3>设计师扶手椅</h3>
+                    <p>造型优雅，独立阅读或休闲空间首选。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="artists-row" id="chair">
+            <div class="artwork-card">
+                <div class="artwork-image">
+                    <img src="https://source.unsplash.com/800x800/?chair,wood" alt="木椅" />
+                </div>
+                <div class="artwork-info">
+                    <h3>原木椅</h3>
+                    <p>木纹温润，兼具美感与耐用性。</p>
+                </div>
+            </div>
+            <div class="artwork-card">
+                <div class="artwork-image">
+                    <img src="https://source.unsplash.com/800x800/?chair,leather" alt="皮椅" />
+                </div>
+                <div class="artwork-info">
+                    <h3>皮革餐椅</h3>
+                    <p>质感细腻，包裹性强，动态支撑。</p>
+                </div>
+            </div>
+            <div class="artwork-card">
+                <div class="artwork-image">
+                    <img src="https://source.unsplash.com/800x800/?chair,ergonomic" alt="人体工学椅" />
+                </div>
+                <div class="artwork-info">
+                    <h3>人体工学椅</h3>
+                    <p>办公场景首选，久坐也能保持舒适。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="artists-row" id="decor">
+            <div class="artwork-card">
+                <div class="artwork-image">
+                    <img src="https://source.unsplash.com/800x800/?decor,sculpture" alt="艺术摆件" />
+                </div>
+                <div class="artwork-info">
+                    <h3>现代摆件</h3>
+                    <p>几何造型，点亮空间视觉焦点。</p>
+                </div>
+            </div>
+            <div class="artwork-card">
+                <div class="artwork-image">
+                    <img src="https://source.unsplash.com/800x800/?vase,ceramic" alt="陶瓷花瓶" />
+                </div>
+                <div class="artwork-info">
+                    <h3>陶瓷花瓶</h3>
+                    <p>釉色纯净，手工质感丰富。</p>
+                </div>
+            </div>
+            <div class="artwork-card">
+                <div class="artwork-image">
+                    <img src="https://source.unsplash.com/800x800/?lamp,decor" alt="装饰灯" />
+                </div>
+                <div class="artwork-info">
+                    <h3>装饰台灯</h3>
+                    <p>柔和光照，营造温馨氛围。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="artists-row" id="bed">
+            <div class="artwork-card">
+                <div class="artwork-image">
+                    <img src="https://source.unsplash.com/800x800/?bed,bedroom" alt="床" />
+                </div>
+                <div class="artwork-info">
+                    <h3>简约床架</h3>
+                    <p>稳固结构，线条利落，空间整洁。</p>
+                </div>
+            </div>
+            <div class="artwork-card">
+                <div class="artwork-image">
+                    <img src="https://source.unsplash.com/800x800/?bed,linen" alt="床" />
+                </div>
+                <div class="artwork-info">
+                    <h3>软包床</h3>
+                    <p>柔软靠背，提升睡眠与阅读舒适度。</p>
+                </div>
+            </div>
+            <div class="artwork-card">
+                <div class="artwork-image">
+                    <img src="https://source.unsplash.com/800x800/?nightstand,furniture" alt="床头柜" />
+                </div>
+                <div class="artwork-info">
+                    <h3>床头柜</h3>
+                    <p>收纳与摆放兼顾，生活井然有序。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="artists-row" id="coffee-table">
+            <div class="artwork-card">
+                <div class="artwork-image">
+                    <img src="https://source.unsplash.com/800x800/?coffee,table" alt="茶几" />
+                </div>
+                <div class="artwork-info">
+                    <h3>圆形茶几</h3>
+                    <p>圆润造型，安全且协调。</p>
+                </div>
+            </div>
+            <div class="artwork-card">
+                <div class="artwork-image">
+                    <img src="https://source.unsplash.com/800x800/?table,glass" alt="茶几" />
+                </div>
+                <div class="artwork-info">
+                    <h3>玻璃茶几</h3>
+                    <p>通透质感，空间更显轻盈。</p>
+                </div>
+            </div>
+            <div class="artwork-card">
+                <div class="artwork-image">
+                    <img src="https://source.unsplash.com/800x800/?table,marble" alt="茶几" />
+                </div>
+                <div class="artwork-info">
+                    <h3>岩板茶几</h3>
+                    <p>耐磨耐用，纹理自然雅致。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="artists-row" id="curtain">
+            <div class="artwork-card">
+                <div class="artwork-image">
+                    <img src="https://source.unsplash.com/800x800/?curtain,interior" alt="窗帘" />
+                </div>
+                <div class="artwork-info">
+                    <h3>遮光窗帘</h3>
+                    <p>高效遮光与隔热，提升睡眠质量。</p>
+                </div>
+            </div>
+            <div class="artwork-card">
+                <div class="artwork-image">
+                    <img src="https://source.unsplash.com/800x800/?curtain,linen" alt="窗帘" />
+                </div>
+                <div class="artwork-info">
+                    <h3>亚麻窗帘</h3>
+                    <p>自然质感，清新通透的空间体验。</p>
+                </div>
+            </div>
+            <div class="artwork-card">
+                <div class="artwork-image">
+                    <img src="https://source.unsplash.com/800x800/?blinds,window" alt="窗帘" />
+                </div>
+                <div class="artwork-info">
+                    <h3>百叶窗</h3>
+                    <p>易于调光，简约风格搭配。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="artists-row" id="floor">
+            <div class="artwork-card">
+                <div class="artwork-image">
+                    <img src="https://source.unsplash.com/800x800/?floor,wood" alt="地板" />
+                </div>
+                <div class="artwork-info">
+                    <h3>实木地板</h3>
+                    <p>自然纹理与脚感，温暖空间气质。</p>
+                </div>
+            </div>
+            <div class="artwork-card">
+                <div class="artwork-image">
+                    <img src="https://source.unsplash.com/800x800/?floor,laminate" alt="地板" />
+                </div>
+                <div class="artwork-info">
+                    <h3>复合地板</h3>
+                    <p>耐磨易打理，性价比优选。</p>
+                </div>
+            </div>
+            <div class="artwork-card">
+                <div class="artwork-image">
+                    <img src="https://source.unsplash.com/800x800/?floor,stone" alt="地板" />
+                </div>
+                <div class="artwork-info">
+                    <h3>石材地面</h3>
+                    <p>高端质感，适合大空间公共区域。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="artists-row" id="tile">
+            <div class="artwork-card">
+                <div class="artwork-image">
+                    <img src="https://source.unsplash.com/800x800/?tile,ceramic" alt="瓷砖" />
+                </div>
+                <div class="artwork-info">
+                    <h3>釉面砖</h3>
+                    <p>色泽均匀，防潮耐污，适用广泛。</p>
+                </div>
+            </div>
+            <div class="artwork-card">
+                <div class="artwork-image">
+                    <img src="https://source.unsplash.com/800x800/?tile,marble" alt="瓷砖" />
+                </div>
+                <div class="artwork-info">
+                    <h3>大板瓷砖</h3>
+                    <p>纹理自然，空间更显延展与统一。</p>
+                </div>
+            </div>
+            <div class="artwork-card">
+                <div class="artwork-image">
+                    <img src="https://source.unsplash.com/800x800/?mosaic,tile" alt="瓷砖" />
+                </div>
+                <div class="artwork-info">
+                    <h3>马赛克</h3>
+                    <p>艺术感强，局部点缀效果出众。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 更多分类区块（锚点） -->
+        <div class="artists-row" id="bathroom">
+            <div class="artwork-card">
+                <div class="artwork-image">
+                    <img src="https://source.unsplash.com/800x800/?bathroom,interior" alt="卫浴" />
+                </div>
+                <div class="artwork-info">
+                    <h3>卫浴套系</h3>
+                    <p>简洁线条与耐用材质，易清洁维护。</p>
+                </div>
+            </div>
+            <div class="artwork-card">
+                <div class="artwork-image">
+                    <img src="https://source.unsplash.com/800x800/?shower,bathroom" alt="卫浴" />
+                </div>
+                <div class="artwork-info">
+                    <h3>淋浴空间</h3>
+                    <p>玻璃隔断与防滑地面，安全实用。</p>
+                </div>
+            </div>
+            <div class="artwork-card">
+                <div class="artwork-image">
+                    <img src="https://source.unsplash.com/800x800/?sink,bathroom" alt="卫浴" />
+                </div>
+                <div class="artwork-info">
+                    <h3>浴室柜</h3>
+                    <p>收纳合理，镜柜一体化设计。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="artists-row" id="lighting">
+            <div class="artwork-card">
+                <div class="artwork-image">
+                    <img src="https://source.unsplash.com/800x800/?lighting,lamp" alt="灯具" />
+                </div>
+                <div class="artwork-info">
+                    <h3>吊灯</h3>
+                    <p>焦点照明，提升空间层次与氛围。</p>
+                </div>
+            </div>
+            <div class="artwork-card">
+                <div class="artwork-image">
+                    <img src="https://source.unsplash.com/800x800/?lamp,interior" alt="灯具" />
+                </div>
+                <div class="artwork-info">
+                    <h3>台灯</h3>
+                    <p>局部照明，阅读或桌面工作的好搭档。</p>
+                </div>
+            </div>
+            <div class="artwork-card">
+                <div class="artwork-image">
+                    <img src="https://source.unsplash.com/800x800/?floor,lamp" alt="灯具" />
+                </div>
+                <div class="artwork-info">
+                    <h3>落地灯</h3>
+                    <p>柔光扩散，加强空间舒适度。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="artists-row" id="bench">
+            <div class="artwork-card">
+                <div class="artwork-image">
+                    <img src="https://source.unsplash.com/800x800/?bench,furniture" alt="长凳" />
+                </div>
+                <div class="artwork-info">
+                    <h3>实木长凳</h3>
+                    <p>简约耐用，玄关与餐厅皆宜。</p>
+                </div>
+            </div>
+            <div class="artwork-card">
+                <div class="artwork-image">
+                    <img src="https://source.unsplash.com/800x800/?bench,modern" alt="长凳" />
+                </div>
+                <div class="artwork-info">
+                    <h3>设计长凳</h3>
+                    <p>造型独特，兼具装饰与实用属性。</p>
+                </div>
+            </div>
+            <div class="artwork-card">
+                <div class="artwork-image">
+                    <img src="https://source.unsplash.com/800x800/?bench,leather" alt="长凳" />
+                </div>
+                <div class="artwork-info">
+                    <h3>皮革长凳</h3>
+                    <p>触感柔软，舒适就座体验。</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 返回顶部按钮（站点通用逻辑） -->
+    <div class="back-to-top"><a href="#" title="返回顶部"><i class="fas fa-arrow-up"></i></a></div>
+
+    <!-- 标准站点页脚（与其他页面一致） -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="logo">M Artist</div>
+                    <div class="tagline">艺术 · 家居 · 文创</div>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li><a href="mailto:info@martist.com">info@martist.com</a></li>
+                        <li><a href="tel:+8613800000000">+86 138 0000 0000</a></li>
+                        <li>工作日 9:00–18:00</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>服务</h4>
+                    <ul>
+                        <li><a href="artists.html">艺术家</a></li>
+                        <li><a href="art-product.html">艺术商品</a></li>
+                        <li><a href="wenchuang.html">文创产品</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关注我们</h4>
+                    <ul>
+                        <li><a href="#">微博</a></li>
+                        <li><a href="#">微信</a></li>
+                        <li><a href="#">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-meta">
+                <p>本网站旨在展示艺术与生活美学，所有图片为示例占位图。</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="bottom-inner">
+                <div class="footer-legal">© 2025 M Artist 保留所有权利</div>
+                <div class="footer-social">
+                    <a href="#" aria-label="微博"><i class="fab fa-weibo"></i></a>
+                    <a href="#" aria-label="微信"><i class="fab fa-weixin"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

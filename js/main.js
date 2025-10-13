@@ -164,4 +164,34 @@ document.addEventListener('DOMContentLoaded', function() {
             t = setTimeout(() => filterCards(val), 150);
         });
     }
+
+    // Global image fallback: if an image fails to load, swap to a local placeholder
+    // Supports optional per-image fallback via data-fallback="..."
+    const addImageFallback = () => {
+        const defaultPlaceholder = 'images/product-placeholder.svg';
+        document.querySelectorAll('img').forEach(img => {
+            const onError = () => {
+                const fallback = img.getAttribute('data-fallback') || defaultPlaceholder;
+                if (img.src !== fallback) {
+                    img.src = fallback;
+                }
+                img.removeEventListener('error', onError);
+            };
+            img.addEventListener('error', onError);
+        });
+    };
+    addImageFallback();
+
+    // Replace blocked Unsplash sources with stable picsum placeholders (runtime rewrite)
+    const rewriteBlockedImages = () => {
+        const blockedSelector = 'img[src*="source.unsplash.com"]';
+        const imgs = document.querySelectorAll(blockedSelector);
+        if (!imgs.length) return;
+        imgs.forEach((img, i) => {
+            const seedBase = (img.getAttribute('alt') || 'furniture').trim().replace(/\s+/g, '-');
+            const seed = `${seedBase}-${i+1}`;
+            img.src = `https://picsum.photos/seed/${encodeURIComponent(seed)}/800/800`;
+        });
+    };
+    rewriteBlockedImages();
 });
